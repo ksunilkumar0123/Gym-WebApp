@@ -105,3 +105,18 @@ document.addEventListener('DOMContentLoaded', function() {
     totalTime = 0;
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const moveToStartWorkoutsBtn = document.getElementById('moveToStartWorkoutsBtn');
+  
+  moveToStartWorkoutsBtn.addEventListener('click', function() {
+    // Get selected exercises
+    const selectedExercises = document.getElementById('workoutSession').innerHTML;
+    // Store selected exercises in localStorage to pass to Start Workouts page
+    localStorage.setItem('selectedExercises', selectedExercises);
+    // Redirect to Start Workouts page
+    window.location.href = 'start_workouts.html';
+  });
+
+  // Other event listeners and functionality can remain unchanged
+});
