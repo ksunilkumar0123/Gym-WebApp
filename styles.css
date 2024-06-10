@@ -1,7 +1,36 @@
+/* Styles for header */
+header {
+  background-color: #333;
+  padding: 1em 0;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
 /* Styles for tiles */
 .tiles {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .tile {
@@ -9,9 +38,95 @@
   margin: 10px;
   background-color: lightblue;
   cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
 }
 
 /* Hide elements initially */
 .hidden {
   display: none;
+}
+
+/* Styles for the custom workout page */
+#customWorkoutPage {
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+#customWorkoutPage select,
+#customWorkoutPage input,
+#customWorkoutPage button {
+  margin: 10px;
+  padding: 10px;
+}
+
+#workoutSession div {
+  margin-top: 10px;
+}
+
+#suggestions {
+  margin-top: 10px;
+}
+
+#suggestions div {
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+/* Styles for the summary page */
+#summaryPage {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#summaryPage h2 {
+  margin-bottom: 20px;
+}
+
+#summaryPage p {
+  margin: 10px 0;
+}
+
+#summaryPage button {
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+/* Styles for the plans page */
+#plansPage {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.plans-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px; /* Adjust the width as needed */
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plans-tile img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* Ensures the image is square */
+  object-fit: cover;
+}
+
+.tile-text {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
 }

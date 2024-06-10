@@ -7,17 +7,52 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="tiles">
-    <div class="tile" id="customWorkouts">
-      Custom Workouts
-    </div>
-  </div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html" id="homeLink">Home</a></li>
+        <li><a href="plans.html" id="plansLink">Plans</a></li>
+        <li><a href="#" id="homeWorkoutsLink">Home Workouts</a></li>
+        <li><a href="#" id="gymWorkoutsLink">Gym Workouts</a></li>
+        <li><a href="#" id="bodyWeightsLink">Body Weights</a></li>
+        <li><a href="#" id="hiitLink">HIIT</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div id="customWorkoutPage" class="hidden">
-    <input type="text" id="exerciseInput" placeholder="Enter exercise">
-    <button id="addExerciseBtn">Add Exercise</button>
-    <div id="workoutSession"></div>
-  </div>
+  <main>
+    <div id="homePage">
+      <div class="tiles">
+        <div class="tile" id="customWorkouts">
+          Custom Workouts
+        </div>
+      </div>
+    </div>
+
+    <div id="customWorkoutPage" class="hidden">
+      <select id="workoutType">
+        <option value="all">All</option>
+        <option value="chest">Chest</option>
+        <option value="legs">Legs</option>
+        <option value="back">Back</option>
+        <option value="biceps">Biceps</option>
+        <option value="triceps">Triceps</option>
+        <option value="abs">Abs</option>
+      </select>
+      <input type="text" id="exerciseInput" placeholder="Enter exercise">
+      <button id="addExerciseBtn">Add Exercise</button>
+      <div id="suggestions"></div>
+      <div id="workoutSession"></div>
+      <button id="completeWorkoutBtn">Complete Workout</button>
+    </div>
+
+    <div id="summaryPage" class="hidden">
+      <h2>Workout Summary</h2>
+      <p id="totalTime"></p>
+      <p id="caloriesBurned"></p>
+      <button id="backHomeBtn">Back to Home</button>
+    </div>
+  </main>
 
   <script src="script.js"></script>
 </body>
