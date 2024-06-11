@@ -1,7 +1,7 @@
 /* Styles for header */
 header {
   background-color: #333;
-  padding: 1em 0;
+  padding: 2em 0; /* Increased padding */
 }
 
 header nav ul {
@@ -26,64 +26,33 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Styles for tiles */
-.tiles {
+
+/* Styles for plans tiles */
+#plansPage {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
-.tile {
- display: flex;
+.plans-tile {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px; /* Adjust size as needed */
-  height: 300px; /* Adjust size as needed */
+  width: 500px; /* Adjust size as needed */
+  height: 500px; /* Adjust size as needed */
   margin: 0 20px; /* Create space between the tiles */
   padding: 20px;
   text-align: center;
-  font-size: 1.5em; /* Increase text size */
+  font-size: 2.0em; /* Increase text size */
 }
 
-.tile img {
+.plans-tile img {
   width: 80%; /* Adjust size as needed */
   height: auto;
   margin-bottom: 10px;
 }
 
-.tile span {
+.plans-tile .tile-text {
   display: block;
   font-weight: bold;
-}
-
-/* Hide elements initially */
-.hidden {
-  display: none;
-}
-
-/* Styles for the custom workout page */
-#customWorkoutPage {
-  margin: 20px auto;
-  max-width: 600px;
-  text-align: center;
-}
-
-#customWorkoutPage select,
-#customWorkoutPage input,
-#customWorkoutPage button {
-  margin: 10px;
-  padding: 10px;
-}
-
-#workoutSession div {
-  margin-top: 10px;
-}
-
-#suggestions {
-  margin-top: 10px;
-}
-
-#suggestions div {
-  margin: 5px 0;
-  cursor: pointer;
 }

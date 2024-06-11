@@ -12,7 +12,7 @@
       <ul>
         <li><a href="index.html" id="homeLink">Home</a></li>
         <li><a href="plans.html" id="plansLink">Plans</a></li>
-        <li><a href="start_workouts.html" id="startWorkoutsLink">Start Workouts</a></li> <!-- Updated link -->
+        <li><a href="start_workouts.html" id="startWorkoutsLink">Start Workouts</a></li>
         <li><a href="#" id="homeWorkoutsLink">Home Workouts</a></li>
         <li><a href="#" id="gymWorkoutsLink">Gym Workouts</a></li>
         <li><a href="#" id="bodyWeightsLink">Body Weights</a></li>
@@ -25,13 +25,15 @@
     <div id="homePage">
       <div class="tiles">
         <div class="tile" id="customWorkouts">
-          Custom Workouts
+          <img src="images\custom_workouts_image3.jpg" alt="Custom Workouts">
+          <span>Custom Workouts</span>
         </div>
       </div>
     </div>
 
     <div id="customWorkoutPage" class="hidden">
-      <select id="workoutType">
+      <select id="workoutType" onchange="refreshSuggestions()">
+        <option value="Select Variation">Select Variation</option>
         <option value="all">All</option>
         <option value="chest">Chest</option>
         <option value="legs">Legs</option>
@@ -44,7 +46,7 @@
       <button id="addExerciseBtn">Add Exercise</button>
       <div id="suggestions"></div>
       <div id="workoutSession"></div>
-      <button id="moveToStartWorkoutsBtn">Move to Start Workouts</button> <!-- Button to move to Start Workouts page -->
+      <button id="moveToStartWorkoutsBtn">Move to Start Workouts</button>
     </div>
 
     <div id="summaryPage" class="hidden">

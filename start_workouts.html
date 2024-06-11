@@ -4,20 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sunil Trainings - Start Workouts</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="start_workouts.css">
 </head>
 <body>
   <header>
     <h1>Start Workouts</h1>
-    <div id="timer">00:00:00</div> <!-- Timer placeholder -->
+    <div id="totalTimer">Total Time: 00:00:00</div>
+    <button id="homeButton">Home</button>
   </header>
 
   <main>
     <div id="workoutList">
       <!-- Selected exercises will be populated here -->
     </div>
+    <button id="finishButton">Finish Workouts</button>
+    <div id="summary" class="hidden">
+      <!-- Workout summary will be displayed here -->
+    </div>
   </main>
 
-  <script src="start_workouts_script.js"></script> <!-- JavaScript for Start Workouts page -->
+  <script src="start_workouts_script.js"></script>
 </body>
 </html>

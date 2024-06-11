@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+#totalTimer {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+/* Main Content Styles */
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#workoutList {
+  margin-bottom: 20px;
+}
+
+#workoutList h2 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+#workoutList .workout-timer {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#workoutList .completeBtn {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+#workoutList .completeBtn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Summary Styles */
+#summary {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#summary h2 {
+  margin-bottom: 20px;
+}
+
+#summary p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+/* Finish Button Styles */
+#finishButton {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#finishButton:hover {
+  background-color: #0056b3;
+}
