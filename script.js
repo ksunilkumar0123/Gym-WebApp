@@ -2,14 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const customWorkoutsTile = document.getElementById('customWorkouts');
   const customWorkoutPage = document.getElementById('customWorkoutPage');
   const homePage = document.getElementById('homePage');
-  const summaryPage = document.getElementById('summaryPage');
   const workoutType = document.getElementById('workoutType');
   const exerciseInput = document.getElementById('exerciseInput');
-  const addExerciseBtn = document.getElementById('addExerciseBtn');
   const workoutSession = document.getElementById('workoutSession');
-  const backHomeBtn = document.getElementById('backHomeBtn');
-  const totalTimeElement = document.getElementById('totalTime');
-  const caloriesBurnedElement = document.getElementById('caloriesBurned');
+  const addExerciseBtn = document.getElementById('addExerciseBtn');
   const suggestions = document.getElementById('suggestions');
 
   const exercises = {
@@ -88,7 +84,12 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
     const exerciseDiv = document.createElement('div');
-    exerciseDiv.innerHTML = `${exercise} - Sets: ${sets} <button class="removeBtn">Remove</button>`;
+    exerciseDiv.classList.add('exercise-box'); // Add a class for styling
+    // Generate a random color for the background
+    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    exerciseDiv.style.backgroundColor = randomColor;
+    // Set exercise and sets text
+    exerciseDiv.innerHTML = `<span>${exercise} - Sets: ${sets}</span>`;
     workoutSession.appendChild(exerciseDiv);
   }
 
@@ -102,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Event listener for moving to Start Workouts
   document.getElementById('moveToStartWorkoutsBtn').addEventListener('click', function() {
     // Get selected exercises
-    const selectedExercises = Array.from(workoutSession.children).map(child => child.textContent.replace(" Remove", ""));
+    const selectedExercises = Array.from(workoutSession.children).map(child => child.textContent);
     // Store selected exercises in localStorage to pass to Start Workouts page
     localStorage.setItem('selectedExercises', JSON.stringify(selectedExercises));
     // Redirect to Start Workouts page
@@ -110,8 +111,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Event listener for going back to home
-  backHomeBtn.addEventListener('click', function() {
-    summaryPage.classList.add('hidden');
+  document.getElementById('backHomeBtn').addEventListener('click', function() {
+    customWorkoutPage.classList.add('hidden');
     homePage.classList.remove('hidden');
     workoutSession.innerHTML = '';
   });

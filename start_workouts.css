@@ -34,34 +34,35 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#workoutList {
-  margin-bottom: 20px;
-}
-
-#workoutList h2 {
-  margin-bottom: 10px;
-  font-size: 1.5em;
-}
-
-#workoutList .workout-timer {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-#workoutList .completeBtn {
-  padding: 10px 20px;
-  margin-bottom: 20px;
-  background-color: #28a745;
-  color: white;
-  border: none;
+/* Styles for exercise boxes */
+.exercise-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align items with space between them */
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc; /* Add a border for separation */
   border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
+  background-color: #f9f9f9; /* Set a uniform background color */
 }
 
-#workoutList .completeBtn:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+.exercise-box span {
+  margin-right: 10px; /* Add spacing between exercise name and sets */
+}
+
+.removeBtn {
+  background-color: #fff; /* Set background color to white */
+  border: 1px solid #ccc; /* Add a border for button */
+  border-radius: 3px;
+  cursor: pointer;
+  color: #f44336; /* Change text color to a red shade */
+  padding: 5px 10px;
+  transition: background-color 0.3s, color 0.3s; /* Add transition effect */
+}
+
+.removeBtn:hover {
+  background-color: #f44336; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
 }
 
 /* Summary Styles */

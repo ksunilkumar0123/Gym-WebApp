@@ -1,3 +1,11 @@
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 /* Styles for header */
 header {
   background-color: #333;
@@ -34,19 +42,19 @@ header nav ul li a:hover {
 }
 
 .tile {
- display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px; /* Adjust size as needed */
-  height: 300px; /* Adjust size as needed */
-  margin: 0 20px; /* Create space between the tiles */
+  width: 300px;
+  height: 300px;
+  margin: 0 20px;
   padding: 20px;
   text-align: center;
-  font-size: 1.5em; /* Increase text size */
+  font-size: 1.5em;
 }
 
 .tile img {
-  width: 80%; /* Adjust size as needed */
+  width: 80%;
   height: auto;
   margin-bottom: 10px;
 }
@@ -61,7 +69,7 @@ header nav ul li a:hover {
   display: none;
 }
 
-/* Styles for the custom workout page */
+/* Styles for custom workout page */
 #customWorkoutPage {
   margin: 20px auto;
   max-width: 600px;
@@ -75,15 +83,75 @@ header nav ul li a:hover {
   padding: 10px;
 }
 
-#workoutSession div {
-  margin-top: 10px;
+#workoutSession {
+  margin-top: 20px;
 }
 
-#suggestions {
+/* Styles for exercise boxes */
+.exercise-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align items with space between them */
+  padding: 10px;
   margin-top: 10px;
+  border: 1px solid #ccc; /* Add a border for separation */
+  border-radius: 5px;
 }
 
-#suggestions div {
-  margin: 5px 0;
+.exercise-box span {
+  margin-right: 10px; /* Add spacing between exercise name and sets */
+}
+
+.removeBtn {
+  background-color: #fff; /* Set background color to white */
+  border: 1px solid #ccc; /* Add a border for button */
+  border-radius: 3px;
   cursor: pointer;
+  color: #f44336; /* Change text color to a red shade */
+  padding: 5px 10px;
+  transition: background-color 0.3s, color 0.3s; /* Add transition effect */
+}
+
+.removeBtn:hover {
+  background-color: #f44336; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+/* Media Queries for Responsive Design */
+
+/* Smaller screens (phones) */
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 0.5em 0;
+  }
+  header nav ul li {
+    margin: 0 10px;
+  }
+  .tiles {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tile {
+    width: 80%;
+    height: auto;
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+}
+
+/* Medium-sized screens (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .tile {
+    width: 45%;
+    margin: 10px;
+  }
+}
+
+/* Larger screens (desktops) */
+@media only screen and (min-width: 1025px) {
+  .tile {
+    width: 300px; /* Reset width to original for larger screens */
+    margin: 0 20px;
+    font-size: 1.5em; /* Reset font size */
+  }
 }
