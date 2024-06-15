@@ -8,7 +8,7 @@
     <!-- Project coordinates -->
     <groupId>com.sunil.trainings</groupId>
     <artifactId>sunil-trainings-web</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>war</packaging>
 
     <!-- Project metadata -->
