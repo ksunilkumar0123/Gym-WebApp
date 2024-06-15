@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIIT Workouts</title>
+  <link rel="stylesheet" href="css/HIIT.css">
+</head>
+<body>
+  <header>
+    <h1>HIIT Workouts</h1>
+  </header>
+
+  <main>
+    <section class="workout-form">
+      <h2>Add Workouts</h2>
+      <div class="add-workout">
+        <input type="text" id="workoutName" placeholder="Enter workout">
+        <input type="number" id="workoutTime" placeholder="Workout time (seconds)">
+        <input type="number" id="restTime" placeholder="Rest interval (seconds)">
+        <button id="addWorkoutBtn">Add Workout</button>
+      </div>
+      <div id="workouts-list">
+        <!-- Added workouts will be dynamically displayed here -->
+      </div>
+      <button id="startWorkoutBtn">Start HIIT Workout</button>
+    </section>
+  </main>
+
+  <script src="js/HIIT.js"></script>
+</body>
+</html>

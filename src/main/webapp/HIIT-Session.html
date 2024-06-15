@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIIT Session</title>
+  <link rel="stylesheet" href="css/hiit-session.css">
+</head>
+<body>
+  <header>
+    <h1>HIIT Session</h1>
+  </header>
+
+  <main>
+    <section id="session-info">
+      <h2 id="currentWorkoutName">Workout Name</h2>
+      <div id="workoutTimer">10</div>
+      <button id="skipBtn">Skip Workout</button>
+      <button id="pauseBtn">Pause</button>
+      <button id="resumeBtn" class="hidden">Resume</button>
+    </section>
+
+    <section id="rest-info" class="hidden">
+      <h2>Rest Interval</h2>
+      <div id="restTimer">30</div>
+      <button id="pauseRestBtn">Pause</button>
+      <button id="resumeRestBtn" class="hidden">Resume</button>
+    </section>
+
+    <section id="next-workout" class="hidden">
+      <h2>Next Workout</h2>
+      <div id="nextWorkoutName">Next Workout Name</div>
+    </section>
+  </main>
+
+  <script src="js/hiit-session.js"></script>
+</body>
+</html>
