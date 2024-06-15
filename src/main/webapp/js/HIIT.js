@@ -44,6 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
     localStorage.setItem('workouts', JSON.stringify(workouts));
 
     // Redirect to HIIT session page
-    window.location.href = 'hiit-session.html';
+    window.location.href = 'HIIT-Session.html';
   });
 });
