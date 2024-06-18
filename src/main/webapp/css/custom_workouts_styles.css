@@ -1,0 +1,52 @@
+/* Hide elements initially */
+.hidden {
+  display: none;
+}
+
+/* Styles for custom workout page */
+#customWorkoutPage {
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+#customWorkoutPage select,
+#customWorkoutPage input,
+#customWorkoutPage button {
+  margin: 10px;
+  padding: 10px;
+}
+
+#workoutSession {
+  margin-top: 20px;
+}
+
+/* Styles for exercise boxes */
+.exercise-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align items with space between them */
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc; /* Add a border for separation */
+  border-radius: 5px;
+}
+
+.exercise-box span {
+  margin-right: 10px; /* Add spacing between exercise name and sets */
+}
+
+.removeBtn {
+  background-color: #fff; /* Set background color to white */
+  border: 1px solid #ccc; /* Add a border for button */
+  border-radius: 3px;
+  cursor: pointer;
+  color: #f44336; /* Change text color to a red shade */
+  padding: 5px 10px;
+  transition: background-color 0.3s, color 0.3s; /* Add transition effect */
+}
+
+.removeBtn:hover {
+  background-color: #f44336; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}

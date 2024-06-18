@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Sunil Trainings</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -13,9 +12,6 @@
       <ul>
         <li><a href="index.html" id="homeLink">Home</a></li>
         <li><a href="plans.html" id="plansLink">Plans</a></li>
-      <!--  <li><a href="#" id="homeWorkoutsLink">Home Workouts</a></li> -->
-      <!-- <li><a href="#" id="gymWorkoutsLink">Gym Workouts</a></li> -->
-      <!--  <li><a href="#" id="bodyWeightsLink">Body Weights</a></li> -->
         <li><a href="HIIT.html" id="hiitLink">HIIT</a></li>
       </ul>
     </nav>
@@ -25,38 +21,26 @@
     <div id="homePage">
       <div class="tiles">
         <div class="tile" id="customWorkouts">
-          <img src="images\custom_workouts_image3.jpg" alt="Custom Workouts">
-          <span>Custom Workouts</span>
+         <a href="custom_workouts.html">
+            <img src="images/custom_workouts_image3.jpg" alt="Custom Workouts">
+           <!-- <span>Custom Workouts</span> -->
+          </a>
         </div>
       </div>
     </div>
-
-    <div id="customWorkoutPage" class="hidden">
-      <select id="workoutType" onchange="refreshSuggestions()">
-        <option value="Select Variation">Select Variation</option>
-        <option value="all">All</option>
-        <option value="chest">Chest</option>
-        <option value="legs">Legs</option>
-        <option value="back">Back</option>
-        <option value="biceps">Biceps</option>
-        <option value="triceps">Triceps</option>
-        <option value="abs">Abs</option>
-      </select>
-      <input type="text" id="exerciseInput" placeholder="Enter exercise">
-      <button id="addExerciseBtn">Add Exercise</button>
-      <div id="suggestions"></div>
-      <div id="workoutSession"></div>
-      <button id="moveToStartWorkoutsBtn">Move to Start Workouts</button>
-    </div>
-
-    <div id="summaryPage" class="hidden">
-      <h2>Workout Summary</h2>
-      <p id="totalTime"></p>
-      <p id="caloriesBurned"></p>
-      <button id="backHomeBtn">Back to Home</button>
+	
+	<div id="homePage">
+      <div class="tiles">
+        <div class="tile" id="OldSchool">
+         <!-- <a href="custom_workouts.html"> -->
+            <img src="images/old_school3.jpg" alt="Old School">
+            <span>Old School</span>
+          </a>
+        </div>
+      </div>
     </div>
   </main>
 
-  <script src="js/script.js"></script>
+  <script src="js/index_script.js"></script>
 </body>
 </html>
