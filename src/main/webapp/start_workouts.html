@@ -8,18 +8,43 @@
 </head>
 <body>
   <header>
-    <h1>Start Workouts</h1>
-    <div id="totalTimer">Total Time: 00:00:00</div>
-    <button id="homeButton">Home</button>
+    <div class="container">
+      <h1>Start Workouts</h1>
+      <div id="totalTimer">Total Time: 00:00:00</div>
+    </div>
   </header>
 
   <main>
-    <div id="workoutList">
-      <!-- Selected exercises will be populated here -->
+    <div class="container">
+      <div id="workoutList">
+        <!-- Selected exercises will be populated here dynamically -->
+      </div>
     </div>
-    <button id="finishButton">Finish Workouts</button>
-    <div id="summary" class="hidden">
-      <!-- Workout summary will be displayed here -->
+
+    <div class="container">
+      <div id="countdown">
+        <h2>Workout Begins In</h2>
+        <div id="countdownTimer">10</div>
+        <button id="skipCountdownButton">Skip Countdown</button>
+      </div>
+
+      <div id="workoutDetails" class="hidden">
+        <h2 id="workoutName"></h2>
+        <div class="workout-timer" id="workoutTimer">00:00:00</div>
+        <div id="nextWorkout">Next: <span id="nextWorkoutName"></span></div>
+        <div class="button-container">
+          <button id="doneButton">Done</button>
+          <button id="skipButton">Skip</button>
+        </div>
+      </div>
+
+      <button id="finishButton" class="hidden">Finish Workouts</button>
+    </div>
+
+    <div class="container">
+      <div id="summary" class="hidden">
+        <!-- Workout summary will be displayed here -->
+      </div>
     </div>
   </main>
 

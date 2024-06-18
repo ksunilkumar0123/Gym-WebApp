@@ -1,10 +1,16 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f0f0f0;
   color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 header {
@@ -12,6 +18,7 @@ header {
   color: white;
   padding: 20px 0;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -24,45 +31,68 @@ h1 {
   margin-top: 10px;
 }
 
-/* Main Content Styles */
-main {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Countdown Styles */
+#countdown {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Styles for exercise boxes */
-.exercise-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Align items with space between them */
-  padding: 10px;
-  margin-top: 10px;
-  border: 1px solid #ccc; /* Add a border for separation */
-  border-radius: 5px;
-  background-color: #f9f9f9; /* Set a uniform background color */
+#countdownTimer {
+  font-size: 4em;
+  font-weight: bold;
+  color: #4CAF50; /* Green countdown timer */
 }
 
-.exercise-box span {
-  margin-right: 10px; /* Add spacing between exercise name and sets */
-}
-
-.removeBtn {
-  background-color: #fff; /* Set background color to white */
-  border: 1px solid #ccc; /* Add a border for button */
-  border-radius: 3px;
+#skipCountdownButton {
+  padding: 10px 20px;
+  font-size: 1em;
   cursor: pointer;
-  color: #f44336; /* Change text color to a red shade */
-  padding: 5px 10px;
-  transition: background-color 0.3s, color 0.3s; /* Add transition effect */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
-.removeBtn:hover {
-  background-color: #f44336; /* Change background color on hover */
-  color: #fff; /* Change text color on hover */
+#skipCountdownButton:hover {
+  background-color: #45a049; /* Darker shade for hover effect */
+}
+
+/* Workout Details Styles */
+#workoutDetails {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.workout-timer {
+  font-size: 2em;
+  margin-top: 10px;
+  color: #4CAF50; /* Green workout timer */
+}
+
+#nextWorkout {
+  font-size: 0.8em;
+  margin-top: 10px;
+}
+
+.button-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.button-container button:hover {
+  background-color: #45a049; /* Darker shade for hover effect */
 }
 
 /* Summary Styles */
@@ -78,22 +108,4 @@ main {
 #summary p {
   font-size: 1.2em;
   margin: 10px 0;
-}
-
-/* Finish Button Styles */
-#finishButton {
-  display: block;
-  width: 100%;
-  padding: 15px 0;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2em;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-#finishButton:hover {
-  background-color: #0056b3;
 }

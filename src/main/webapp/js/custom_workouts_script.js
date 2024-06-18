@@ -74,22 +74,75 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
     }
+
     const exerciseDiv = document.createElement('div');
-    exerciseDiv.classList.add('exercise-box'); // Add a class for styling
-    // Generate a random color for the background
-    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    exerciseDiv.style.backgroundColor = randomColor;
+    exerciseDiv.classList.add('exercise-box');
+
+    // Create move icon
+    const moveIcon = document.createElement('span');
+    moveIcon.classList.add('move-icon');
+    moveIcon.innerHTML = '&#9776;'; // Unicode for move icon
+    exerciseDiv.appendChild(moveIcon);
+
     // Set exercise and sets text
-    exerciseDiv.innerHTML = `<span>${exercise} - Sets: ${sets}</span> <button class="removeBtn">Remove</button>`;
+    exerciseDiv.innerHTML += `<span>${exercise} - Sets: ${sets}</span>`;
+
+    // Create remove icon
+    const removeIcon = document.createElement('span');
+    removeIcon.classList.add('remove-icon');
+    removeIcon.innerHTML = '&#128465;'; // Unicode for red bin icon
+    removeIcon.addEventListener('click', function() {
+      exerciseDiv.remove();
+    });
+    exerciseDiv.appendChild(removeIcon);
+
+    exerciseDiv.setAttribute('draggable', true); // Make the div draggable
+    exerciseDiv.addEventListener('dragstart', dragStart);
+    exerciseDiv.addEventListener('dragover', dragOver);
+    exerciseDiv.addEventListener('drop', drop);
+    exerciseDiv.addEventListener('dragend', dragEnd);
+
     workoutSession.appendChild(exerciseDiv);
   }
 
   // Event listener for removing exercise
   workoutSession.addEventListener('click', function(event) {
-    if (event.target.classList.contains('removeBtn')) {
+    if (event.target.classList.contains('remove-icon')) {
       event.target.parentElement.remove();
     }
   });
+
+  // Drag and drop functions
+  let draggedItem = null;
+
+  function dragStart(e) {
+    draggedItem = e.target;
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/html', e.target.innerHTML);
+    setTimeout(() => {
+      e.target.style.display = 'none';
+    }, 0);
+  }
+
+  function dragOver(e) {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'move';
+    return false;
+  }
+
+  function drop(e) {
+    e.stopPropagation();
+    if (draggedItem !== this) {
+      draggedItem.innerHTML = this.innerHTML;
+      this.innerHTML = e.dataTransfer.getData('text/html');
+    }
+    return false;
+  }
+
+  function dragEnd(e) {
+    e.target.style.display = 'block';
+    draggedItem = null;
+  }
 
   // Event listener for moving to Start Workouts
   document.getElementById('moveToStartWorkoutsBtn').addEventListener('click', function() {
