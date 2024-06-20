@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Session</title>
+    <link rel="stylesheet" href="css/workout-session.css">
+</head>
+<body>
+    <header>
+        <h1>Workout Session</h1>
+    </header>
+    <main>
+        <div id="workout-timer" class="container">
+            <div id="total-workout-timer" class="timer">Total Time: 00:00</div>
+            <h2 id="current-workout-name"></h2>
+            <div id="current-workout-timer" class="timer">00:00</div>
+        </div>
+        <div id="workout-details" class="container">
+            <!-- Workout details will be dynamically added here -->
+        </div>
+        <div id="controls" class="container">
+            <button id="start-workout" class="btn">Start Workout</button>
+            <button id="done-workout" class="btn">Done</button>
+            <button id="skip-workout" class="btn">Skip</button>
+            <button id="finish-workout" class="btn" style="display: none;">Finish Workout</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Fitness Brand</p>
+    </footer>
+    <script src="js/workout-session.js"></script>
+</body>
+</html>

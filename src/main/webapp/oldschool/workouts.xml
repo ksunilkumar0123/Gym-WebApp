@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workouts>
+    <day id="1">
+        <workout>
+            <name>Push-ups</name>
+            <sets>3</sets>
+            <reps>15</reps>
+        </workout>
+        <workout>
+            <name>Squats</name>
+            <sets>3</sets>
+            <reps>12</reps>
+        </workout>
+        <!-- Add more workouts for Day 1 -->
+    </day>
+    <day id="2">
+        <workout>
+            <name>Plank</name>
+            <sets>3</sets>
+            <reps>30 seconds</reps>
+        </workout>
+        <workout>
+            <name>Running</name>
+            <sets>1</sets>
+            <reps>30 minutes</reps>
+        </workout>
+        <!-- Add more workouts for Day 2 -->
+    </day>
+    <!-- Add days up to Day 30 -->
+</workouts>

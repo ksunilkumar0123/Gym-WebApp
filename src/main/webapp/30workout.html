@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30-Day Workout Program</title>
+    <link rel="stylesheet" href="css/30workout.css">
+</head>
+<body>
+    <header>
+        <h1>30-Day Workout Program</h1>
+    </header>
+    <main>
+        <div class="days">
+            <button class="day-button" onclick="selectDay(1)">Day 1</button>
+            <button class="day-button" onclick="selectDay(2)">Day 2</button>
+			 <button class="day-button" onclick="selectDay(3)">Day 3</button>
+            <!-- Add buttons for all 30 days -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Sunil's Fitness</p>
+    </footer>
+    <script>
+        function selectDay(dayNumber) {
+            localStorage.setItem('selectedDay', dayNumber);
+            window.location.href = 'workout-session.html';
+        }
+    </script>
+</body>
+</html>
