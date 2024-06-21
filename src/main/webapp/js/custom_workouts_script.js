@@ -38,12 +38,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Filter exercises based on input
     filteredExercises.forEach(exercise => {
       if (exercise.toLowerCase().includes(input)) {
-        const suggestionDiv = document.createElement('div');
-        suggestionDiv.textContent = exercise;
-        suggestionDiv.addEventListener('click', function() {
+        const suggestionBox = document.createElement('div');
+        suggestionBox.classList.add('suggestion-box');
+
+        const exerciseText = document.createElement('span');
+        exerciseText.textContent = exercise;
+        suggestionBox.appendChild(exerciseText);
+
+        const addIcon = document.createElement('i');
+        addIcon.classList.add('fas', 'fa-plus');
+        addIcon.addEventListener('click', function() {
           addExercise(exercise);
         });
-        suggestions.appendChild(suggestionDiv);
+        suggestionBox.appendChild(addIcon);
+
+        suggestions.appendChild(suggestionBox);
       }
     });
   }
@@ -51,18 +60,16 @@ document.addEventListener('DOMContentLoaded', function() {
   // Event listener for typing in the exercise input
   exerciseInput.addEventListener('input', refreshSuggestions);
 
+  // Event listener for changing the workout type
+  workoutType.addEventListener('change', refreshSuggestions);
+
   // Event listener for adding exercise
   addExerciseBtn.addEventListener('click', function() {
     const exercise = exerciseInput.value.trim();
     if (exercise !== '') {
-      const sets = prompt("How many sets?");
-      if (sets !== null && !isNaN(sets) && sets > 0) {
-        addExercise(exercise, sets);
-        exerciseInput.value = '';
-        suggestions.innerHTML = ''; // Clear suggestions after adding exercise
-      } else {
-        alert("Please enter a valid number of sets.");
-      }
+      addExercise(exercise);
+      exerciseInput.value = '';
+      suggestions.innerHTML = ''; // Clear suggestions after adding exercise
     }
   });
 
@@ -165,4 +172,3 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('homeBtn').onclick = function() {
   window.location.href = 'index.html';
 };
-

@@ -9,15 +9,21 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
 header h1 {
   margin: 0;
+  margin-left: 10px;
 }
 
 header .fas {
@@ -118,6 +124,39 @@ main {
 
 .remove-icon:hover {
   color: #c62828;
+}
+
+/* Styles for suggestion boxes */
+.suggestion-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.suggestion-box:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-box span {
+  flex: 1;
+}
+
+.suggestion-box .fa-plus {
+  color: #007bff;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: color 0.3s;
+}
+
+.suggestion-box .fa-plus:hover {
+  color: #0056b3;
 }
 
 /* Hide elements initially */

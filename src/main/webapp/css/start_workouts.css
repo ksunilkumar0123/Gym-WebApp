@@ -109,3 +109,25 @@ h1 {
   font-size: 1.2em;
   margin: 10px 0;
 }
+
+/* Center the finish button */
+#finishButton {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#finishButton.hidden {
+  display: none;
+}
+
+#finishButton:hover {
+  background-color: #45a049; /* Darker shade for hover effect */
+}

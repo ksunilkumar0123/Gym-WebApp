@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (currentCountdown <= 0) {
         clearInterval(countdownInterval);
         document.getElementById('countdown').style.display = 'none'; // Hide countdown section
+        skipCountdownButton.style.display = 'none'; // Hide Skip Countdown button
         startNextWorkout();
       }
     }, 1000);
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
   skipCountdownButton.addEventListener('click', () => {
     clearInterval(countdownInterval);
     document.getElementById('countdown').style.display = 'none'; // Hide countdown section immediately
+    skipCountdownButton.style.display = 'none'; // Hide Skip Countdown button
     startNextWorkout();
   });
 
@@ -63,32 +65,41 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         nextWorkoutName.textContent = 'End of workout list';
         finishButton.classList.remove('hidden');
+        doneButton.style.display = 'none'; // Hide Done button for the last workout
+        skipButton.style.display = 'none'; // Hide Skip button for the last workout
       }
 
       // Initialize timer for the current workout
       startWorkoutTimer(workoutIndex);
 
       // Done button click event
-      doneButton.addEventListener('click', () => {
-        clearInterval(workoutTimers[workoutIndex].interval);
-        workoutIndex++;
-        if (workoutIndex < selectedExercises.length) {
-          startNextWorkout();
-        } else {
-          displayFinishButton();
-        }
-      });
+      doneButton.addEventListener('click', handleDoneButton);
 
       // Skip button click event
-      skipButton.addEventListener('click', () => {
-        skippedWorkouts.push(selectedExercises[workoutIndex]);
-        workoutIndex++;
-        if (workoutIndex < selectedExercises.length) {
-          startNextWorkout();
-        } else {
-          displayFinishButton();
-        }
-      });
+      skipButton.addEventListener('click', handleSkipButton);
+    }
+  }
+
+  // Function to handle the Done button click
+  function handleDoneButton() {
+    clearInterval(workoutTimers[workoutIndex].interval);
+    workoutIndex++;
+    if (workoutIndex < selectedExercises.length) {
+      startNextWorkout();
+    } else {
+      displayFinishButton();
+    }
+  }
+
+  // Function to handle the Skip button click
+  function handleSkipButton() {
+    skippedWorkouts.push(selectedExercises[workoutIndex]);
+    clearInterval(workoutTimers[workoutIndex].interval);
+    workoutIndex++;
+    if (workoutIndex < selectedExercises.length) {
+      startNextWorkout();
+    } else {
+      displayFinishButton();
     }
   }
 
