@@ -161,3 +161,8 @@ document.addEventListener('DOMContentLoaded', function() {
     workoutSession.innerHTML = '';
   });
 });
+
+document.getElementById('homeBtn').onclick = function() {
+  window.location.href = 'index.html';
+};
+

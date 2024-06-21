@@ -18,6 +18,7 @@ header {
     color: white;
     padding: 1em 0;
     text-align: center;
+    border-bottom: 5px solid #333;
 }
 
 main {
@@ -37,12 +38,24 @@ main {
     width: 100%;
     max-width: 600px; /* Adjust as needed */
     margin-bottom: 20px;
+    border: 1px solid #ddd;
 }
 
 .timer {
     font-size: 24px;
     text-align: center;
     margin-bottom: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.large-timer {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 #controls {
@@ -75,13 +88,14 @@ footer {
     color: white;
     text-align: center;
     padding: 1em 0;
+    border-top: 5px solid #333;
 }
 
 @media (max-width: 600px) {
-    .container {
+   .container {
         padding: 1em;
     }
-    .btn {
+   .btn {
         font-size: 14px;
         padding: 8px 16px;
     }
@@ -95,25 +109,4 @@ footer {
 #workout-details h3 {
     font-size: 20px;
     margin-bottom: 0.5em;
-    color: #333;
-}
-
-#workout-details ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#workout-details li {
-    border-bottom: 1px solid #ddd;
-    padding: 0.75em 0;
-}
-
-#workout-details li:last-child {
-    border-bottom: none;
-}
-
-#workout-details strong {
-    font-weight: bold;
-    margin-right: 5px;
-}
-
+   

@@ -1,10 +1,32 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header .fas {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+header .fas:hover {
+  color: #0056b3;
 }
 
 main {
@@ -13,7 +35,7 @@ main {
   padding: 20px;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Styles for custom workout page */
@@ -28,6 +50,21 @@ main {
 #customWorkoutPage button {
   margin: 10px;
   padding: 10px;
+  width: calc(100% - 20px);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+#customWorkoutPage button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+#customWorkoutPage button:hover {
+  background-color: #0056b3;
 }
 
 #workoutSession {
@@ -44,6 +81,12 @@ main {
   border: 1px solid #ccc;
   border-radius: 5px;
   position: relative;
+  background-color: #fafafa;
+  transition: background-color 0.3s;
+}
+
+.exercise-box:hover {
+  background-color: #f0f0f0;
 }
 
 .exercise-box span {

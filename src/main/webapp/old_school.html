@@ -3,23 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>30 Day Workout Challenge</title>
+    <title>Old School Workout Program</title>
     <link rel="stylesheet" href="css/old_school.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Old School Workout Challenge</h1>
-        <a href="index.html" class="home-button">Home</a>
+        <nav>
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+        </nav>
+        <h1>Old School Workout Program</h1>
     </header>
-    <div id="workout-buttons">
-        <button id="day1" class="day-button">Day 1</button>
-        <button id="day2" class="day-button locked">Day 2</button>
-        <button id="day3" class="day-button locked">Day 3</button>
-        <!-- Add buttons up to day 30 -->
-        <!-- Example: -->
-        <!-- <button id="day30" class="day-button locked">Day 30</button> -->
-    </div>
-
-    <script src="js/old_school.js"></script>
+    <main>
+        <section class="day-selection">
+            <h2>Select a Day:</h2>
+            <div class="day-buttons">
+                <button class="day-button" onclick="selectDay(1)">Day 1</button>
+                <button class="day-button" onclick="selectDay(2)">Day 2</button>
+                <button class="day-button" onclick="selectDay(3)">Day 3</button>
+                <button class="day-button" onclick="selectDay(4)">Day 4</button>
+                <button class="day-button" onclick="selectDay(5)">Day 5</button>
+                <button class="day-button" onclick="selectDay(6)">Day 6</button>
+                <button class="day-button" onclick="selectDay(7)">Day 7</button>
+                <button class="day-button" onclick="selectDay(8)">Day 8</button>
+                <button class="day-button" onclick="selectDay(9)">Day 9</button>
+                <button class="day-button" onclick="selectDay(10)">Day 10</button>
+                <button class="day-button" onclick="selectDay(11)">Day 11</button>
+                <button class="day-button" onclick="selectDay(12)">Day 12</button>
+                <!-- Add buttons for all 30 days -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Sunil's Fitness</p>
+    </footer>
+    <script>
+        function selectDay(dayNumber) {
+            localStorage.setItem('selectedDay', dayNumber);
+            window.location.href = 'workout-session.html';
+        }
+    </script>
 </body>
 </html>
