@@ -32,6 +32,18 @@ h1 {
 }
 
 /* Countdown Styles */
+@keyframes countdownScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 #countdown {
   text-align: center;
   margin-bottom: 20px;
@@ -41,6 +53,7 @@ h1 {
   font-size: 4em;
   font-weight: bold;
   color: #4CAF50; /* Green countdown timer */
+  animation: countdownScale 1s infinite;
 }
 
 #skipCountdownButton {
@@ -59,9 +72,21 @@ h1 {
 }
 
 /* Workout Details Styles */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 #workoutDetails {
   text-align: center;
   margin-top: 20px;
+  animation: fadeIn 0.5s ease;
 }
 
 .workout-timer {
@@ -89,6 +114,7 @@ h1 {
   color: white;
   border: none;
   border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .button-container button:hover {
@@ -96,9 +122,25 @@ h1 {
 }
 
 /* Summary Styles */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 #summary {
   margin-top: 20px;
   text-align: center;
+  animation: slideIn 0.5s ease;
+}
+
+#summary.hidden {
+  display: none;
 }
 
 #summary h2 {
