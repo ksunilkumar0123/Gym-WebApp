@@ -173,3 +173,23 @@ h1 {
 #finishButton:hover {
   background-color: #45a049; /* Darker shade for hover effect */
 }
+
+.set-entry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease-in-out;
+}
+
+.set-entry input {
+  margin-right: 10px;
+  padding: 5px;
+  width: 80px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}

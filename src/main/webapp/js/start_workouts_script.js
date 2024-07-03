@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Start countdown initially
   startCountdown();
 
-  // Function to start the countdown timer
   function startCountdown() {
     countdownTimer.textContent = '10'; // Initial countdown value
     countdownInterval = setInterval(() => {
@@ -42,46 +41,39 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 1000);
   }
 
-  // Skip countdown button event
   skipCountdownButton.addEventListener('click', () => {
     clearInterval(countdownInterval);
     document.getElementById('countdown').style.display = 'none'; // Hide countdown section immediately
     startNextWorkout();
   });
 
-  // Function to start the next workout
   function startNextWorkout() {
-    if (workoutIndex < selectedExercises.length) {
-      const currentExercise = selectedExercises[workoutIndex];
-      workoutName.textContent = currentExercise;
-      workoutTimer.textContent = '00:00:00';
-      workoutDetails.classList.remove('hidden');
+  if (workoutIndex < selectedExercises.length) {
+    const currentExercise = selectedExercises[workoutIndex];
+    workoutName.textContent = currentExercise.name; // Access the 'name' property
+    workoutTimer.textContent = '00:00:00';
+    workoutDetails.classList.remove('hidden');
 
-      // Display next workout details if available
-      if (workoutIndex < selectedExercises.length - 1) {
-        nextWorkoutName.textContent = selectedExercises[workoutIndex + 1];
-      } else {
-        nextWorkoutName.textContent = 'End of workout list';
-        finishButton.classList.remove('hidden');
-        doneButton.style.display = 'none'; // Hide Done button for the last workout
-        skipButton.style.display = 'none'; // Hide Skip button for the last workout
-        displayFinishButton(); // Automatically display finish button when last workout starts
-      }
-
-      // Initialize timer for the current workout
-      startWorkoutTimer(workoutIndex);
-
-      // Done button click event
-      doneButton.addEventListener('click', handleDoneButton);
-
-      // Skip button click event
-      skipButton.addEventListener('click', handleSkipButton);
+    // Display next workout details if available
+    if (workoutIndex < selectedExercises.length - 1) {
+      nextWorkoutName.textContent = selectedExercises[workoutIndex + 1].name; // Access the 'name' property
+    } else {
+      nextWorkoutName.textContent = 'End of workout list';
+      finishButton.classList.remove('hidden');
+      doneButton.style.display = 'none'; // Hide Done button for the last workout
+      skipButton.style.display = 'none'; // Hide Skip button for the last workout
     }
-  }
 
-  // Function to handle the Done button click
+    startWorkoutTimer(workoutIndex);
+
+    doneButton.addEventListener('click', handleDoneButton);
+    skipButton.addEventListener('click', handleSkipButton);
+  }
+}
+
+
   function handleDoneButton() {
-    clearInterval(workoutTimers[workoutIndex].interval); // Stop the current workout timer interval
+    clearInterval(workoutTimers[workoutIndex].interval);
     workoutIndex++;
     if (workoutIndex < selectedExercises.length) {
       startNextWorkout();
@@ -90,10 +82,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Function to handle the Skip button click
   function handleSkipButton() {
     skippedWorkouts.push(selectedExercises[workoutIndex]);
-    clearInterval(workoutTimers[workoutIndex].interval); // Stop the current workout timer interval
+    clearInterval(workoutTimers[workoutIndex].interval);
     workoutIndex++;
     if (workoutIndex < selectedExercises.length) {
       startNextWorkout();
@@ -102,19 +93,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Function to start workout timer for a specific index
   function startWorkoutTimer(index) {
     workoutTimers[index] = {
       seconds: 0,
       interval: setInterval(() => {
         workoutTimers[index].seconds++;
         updateTimeDisplay(workoutTimer, workoutTimers[index].seconds);
-        updateTimeDisplay(totalTimerElement, ++totalSeconds); // Update total workout time
+        updateTimeDisplay(totalTimerElement, ++totalSeconds);
       }, 1000)
     };
   }
 
-  // Function to update time display in HH:MM:SS format
   function updateTimeDisplay(element, seconds) {
     let displaySeconds = seconds % 60;
     let displayMinutes = Math.floor(seconds / 60) % 60;
@@ -122,26 +111,25 @@ document.addEventListener('DOMContentLoaded', function() {
     element.textContent = `${displayHours.toString().padStart(2, '0')}:${displayMinutes.toString().padStart(2, '0')}:${displaySeconds.toString().padStart(2, '0')}`;
   }
 
-  // Function to display finish button and handle click event
   function displayFinishButton() {
     finishButton.classList.remove('hidden');
     finishButton.addEventListener('click', () => {
-      clearInterval(workoutTimers[workoutIndex].interval); // Stop the last workout timer interval if it's still running
+      clearInterval(workoutTimers[workoutIndex].interval);
       displaySummary();
     });
   }
 
-  // Function to display workout summary
   function displaySummary() {
-    let summaryHTML = `<h2>Workout Summary</h2>`;
-    workoutTimers.forEach((timer, index) => {
-      if (!skippedWorkouts.includes(selectedExercises[index])) {
-        let workoutTime = `${Math.floor(timer.seconds / 3600)}h ${Math.floor((timer.seconds % 3600) / 60)}m ${timer.seconds % 60}s`;
-        summaryHTML += `<p>${selectedExercises[index]}: ${workoutTime}</p>`;
-      }
-    });
+  let summaryHTML = `<h2>Workout Summary</h2>`;
+  workoutTimers.forEach((timer, index) => {
+    if (!skippedWorkouts.includes(selectedExercises[index].name)) { // Use 'name' property
+      let workoutTime = `${Math.floor(timer.seconds / 3600)}h ${Math.floor((timer.seconds % 3600) / 60)}m ${timer.seconds % 60}s`;
+      summaryHTML += `<p>${selectedExercises[index].name}: ${workoutTime}</p>`; // Use 'name' property
+    }
+  });
 
-    summary.innerHTML = summaryHTML;
-    summary.classList.remove('hidden'); // Ensure summary is displayed
-  }
+  summary.innerHTML = summaryHTML;
+  summary.classList.remove('hidden');
+}
+
 });

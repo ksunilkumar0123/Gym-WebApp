@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Workout 1",
+    "exercises": [
+      {
+        "name": "Exercise 1",
+        "sets": [
+          {
+            "setNumber": 1,
+            "weight": 50,
+            "reps": 12
+          },
+          {
+            "setNumber": 2,
+            "weight": 55,
+            "reps": 10
+          }
+        ]
+      },
+      {
+        "name": "Exercise 2",
+        "sets": [
+          {
+            "setNumber": 1,
+            "weight": 30,
+            "reps": 15
+          },
+          {
+            "setNumber": 2,
+            "weight": 35,
+            "reps": 12
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Workout 2",
+    "exercises": [
+      {
+        "name": "Exercise A",
+        "sets": [
+          {
+            "setNumber": 1,
+            "weight": 40,
+            "reps": 8
+          },
+          {
+            "setNumber": 2,
+            "weight": 45,
+            "reps": 8
+          }
+        ]
+      },
+      {
+        "name": "Exercise B",
+        "sets": [
+          {
+            "setNumber": 1,
+            "weight": 60,
+            "reps": 10
+          },
+          {
+            "setNumber": 2,
+            "weight": 65,
+            "reps": 8
+          }
+        ]
+      }
+    ]
+  }
+]

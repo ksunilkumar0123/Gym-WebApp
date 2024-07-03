@@ -103,19 +103,9 @@ main {
   white-space: nowrap;
 }
 
-.move-icon,
 .remove-icon {
   font-size: 1.2em;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.move-icon {
-  left: 10px;
-}
-
-.remove-icon {
   right: 10px;
   color: #f44336;
   cursor: pointer;
@@ -159,7 +149,54 @@ main {
   color: #0056b3;
 }
 
+/* Styles for start workout page */
+#startWorkoutPage {
+  display: none;
+}
+
+#startWorkoutPage h2 {
+  text-align: center;
+}
+
+.exercise-detail {
+  margin-bottom: 20px;
+}
+
+.set-entry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease-in-out;
+}
+
+.set-entry input {
+  margin-right: 10px;
+  padding: 5px;
+  width: 80px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-set-btn {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-set-btn:hover {
+  background-color: #0056b3;
+}
+
 /* Hide elements initially */
 .hidden {
   display: none;
 }
+
