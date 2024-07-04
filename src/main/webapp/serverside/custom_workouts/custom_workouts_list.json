@@ -1,240 +1,24 @@
 [
   {
-    "name": "Test Workout",
+    "name": "test",
     "exercises": [
       {
-        "name": "Test Exercise",
+        "name": "Dumbbell Chest Press",
         "sets": [
           {
-            "kg": 50,
-            "reps": 10
+            "number": "Set 1",
+            "kg": "66",
+            "reps": "12"
           }
         ]
-      }
-    ]
-  },
-  {
-    "name": "test",
-    "exercises": [
-      {
-        "name": "Dumbbell Chest Press",
-        "sets": []
       },
       {
         "name": "Chest Flys",
-        "sets": []
-      }
-    ]
-  },
-  {
-    "name": "test",
-    "exercises": [
-      {
-        "name": "Dumbbell Chest Press",
-        "sets": []
-      },
-      {
-        "name": "Chest Flys",
-        "sets": []
-      }
-    ]
-  },
-  {
-    "name": "test 1",
-    "exercises": [
-      {
-        "name": "Dumbbell Chest Press",
-        "sets": []
-      },
-      {
-        "name": "Chest Flys",
-        "sets": []
-      }
-    ]
-  },
-  {
-    "name": "test2",
-    "exercises": [
-      {
-        "name": "Dumbbell Chest Press",
         "sets": [
           {
-            "kg": "33",
-            "reps": "3"
-          },
-          {
-            "kg": "44",
-            "reps": "3"
-          },
-          {
+            "number": "Set 1",
             "kg": "55",
-            "reps": "5"
-          }
-        ]
-      },
-      {
-        "name": "Chest Flys",
-        "sets": [
-          {
-            "kg": "",
-            "reps": ""
-          },
-          {
-            "kg": "22",
-            "reps": "4"
-          },
-          {
-            "kg": "44",
-            "reps": "2"
-          },
-          {
-            "kg": "44",
-            "reps": "1"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "dd",
-    "exercises": [
-      {
-        "name": "dfd",
-        "sets": [
-          {
-            "number": "Set 1",
-            "kg": "33",
-            "reps": "3"
-          },
-          {
-            "number": "Set 2",
-            "kg": "33",
-            "reps": "4"
-          }
-        ]
-      },
-      {
-        "name": "ds",
-        "sets": [
-          {
-            "number": "Set 1",
-            "kg": "32",
-            "reps": "3"
-          },
-          {
-            "number": "Set 2",
-            "kg": "22",
-            "reps": "4"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "tom",
-    "exercises": [
-      {
-        "name": "dfd",
-        "sets": [
-          {
-            "number": "Set 1",
-            "kg": "33",
-            "reps": "3"
-          },
-          {
-            "number": "Set 2",
-            "kg": "33",
-            "reps": "4"
-          }
-        ]
-      },
-      {
-        "name": "ds",
-        "sets": [
-          {
-            "number": "Set 1",
-            "kg": "32",
-            "reps": "3"
-          },
-          {
-            "number": "Set 2",
-            "kg": "22",
-            "reps": "4"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "done",
-    "exercises": [
-      {
-        "name": "Dumbbell Chest Press",
-        "sets": [
-          {
-            "number": "Set 1",
-            "kg": "",
-            "reps": ""
-          }
-        ]
-      },
-      {
-        "name": "Chest Flys",
-        "sets": [
-          {
-            "number": "Set 1",
-            "kg": "",
-            "reps": ""
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "vv",
-    "exercises": [
-      {
-        "name": "Squats",
-        "sets": [
-          {
-            "number": "Set 1",
-            "kg": "33",
-            "reps": "33"
-          }
-        ]
-      },
-      {
-        "name": "Lunges",
-        "sets": [
-          {
-            "number": "Set 1",
-            "kg": "33",
-            "reps": "3"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "rr",
-    "exercises": [
-      {
-        "name": "Squats",
-        "sets": [
-          {
-            "number": "Set 1",
-            "kg": "20",
-            "reps": "3"
-          }
-        ]
-      },
-      {
-        "name": "Lunges",
-        "sets": [
-          {
-            "number": "Set 1",
-            "kg": "22",
-            "reps": "2"
+            "reps": "10"
           }
         ]
       }
