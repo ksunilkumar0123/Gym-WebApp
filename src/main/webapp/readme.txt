@@ -12,3 +12,15 @@ Note use the below link only to achive this
 http://localhost:8000/plans.html
 
 --------------------------------------------------------------------------------------------------------
+fire base Authentication 
+Run the following command in the directory where the login page is to start the HTTP server:
+
+"python -m http.server"
+
+This will serve your files on http://localhost:8000 by default.
+
+then open browser and go to http://localhost:8000/index.html 
+
+to access the login page make sure you have proper firebase API keys and all in app.js 
+
+-------------------------------------------------------------------

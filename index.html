@@ -3,40 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sunil Trainings</title>
-  <link rel="stylesheet" href="src/main/webapp/css/styles.css">
+  <title>Login/Signup Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js" defer></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html" id="homeLink">Home</a></li>
-        <li><a href="src/main/webapp/plans.html" id="plansLink">Plans</a></li>
-        <li><a href="src/main/webapp/HIIT.html" id="hiitLink">HIIT</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <div id="homePage" class="grid-container">
-      <div class="tile" id="customWorkouts">
-        <a href="src/main/webapp/custom_workouts.html">
-          <img src="src/main/webapp/images/custom_workouts_image3.jpg" alt="Custom Workouts">
-        </a>
+  <div class="container">
+    <div id="authContainer">
+      <div id="loginForm">
+        <h1>Login</h1>
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button id="loginBtn">Login</button>
+        <p id="loginError" class="error-message"></p>
+        <button id="showSignupBtn">Sign Up</button>
       </div>
-      <div class="tile" id="OldSchool">
-        <a href="src/main/webapp/old_school.html">
-          <img src="src/main/webapp/images/old_school3.jpg" alt="Old School">
-        </a>
+      <div id="signupForm" class="hidden">
+        <h1>Signup</h1>
+        <input type="text" id="signupName" placeholder="Name" required>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <button id="signupBtn">Signup</button>
+        <p id="signupError" class="error-message"></p>
+        <button id="showLoginBtn">Back to Login</button>
       </div>
-      <div class="tile" id="SuperSet">
-        <a href="#">
-          <img src="src/main/webapp/images/super_set.jpg" alt="Super Set">
-        </a>
-      </div>
+      <button id="googleSignInBtn">Sign in with Google</button>
     </div>
-  </main>
-
-  <script src="src/main/webapp/js/index_script.js"></script>
+    <div id="userContainer" class="hidden">
+      <h2>Welcome, <span id="userEmail"></span></h2>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </div>
 </body>
 </html>

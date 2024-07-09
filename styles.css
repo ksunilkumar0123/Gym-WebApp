@@ -1,0 +1,72 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('Background1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding-bottom: 100px; /* Add padding at the bottom to ensure content is not cropped */
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #ff5722;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #e64a19;
+}
+
+.error-message {
+  color: #ff5252;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Optional: Adjusting the position of authContainer and userContainer */
+#authContainer, #userContainer {
+  position: relative;
+}

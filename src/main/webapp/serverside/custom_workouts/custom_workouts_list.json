@@ -23,5 +23,55 @@
         ]
       }
     ]
+  },
+  {
+    "name": "done",
+    "exercises": [
+      {
+        "name": "Dumbbell Chest Press",
+        "sets": [
+          {
+            "number": "Set 1",
+            "kg": "20",
+            "reps": "12"
+          }
+        ]
+      },
+      {
+        "name": "Chest Flys",
+        "sets": [
+          {
+            "number": "Set 1",
+            "kg": "22",
+            "reps": "12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "tyyttr",
+    "exercises": [
+      {
+        "name": "Pull-Ups",
+        "sets": [
+          {
+            "number": "Set 1",
+            "kg": "56",
+            "reps": "12"
+          }
+        ]
+      },
+      {
+        "name": "Deadlifts",
+        "sets": [
+          {
+            "number": "Set 1",
+            "kg": "45",
+            "reps": "12"
+          }
+        ]
+      }
+    ]
   }
 ]
